@@ -1,0 +1,7 @@
+project: regex
+target: fuzz-regex-match
+
+cmds:
+  - cmd: /fuzz_regex_match
+  - cmd: /fuzz_regex_match_no_inst @@
+    libfuzzer: false
