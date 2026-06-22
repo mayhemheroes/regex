@@ -1,0 +1,10 @@
+# Mayhem target: regex's fuzz_regex_automata_deserialize_dense_dfa fuzzer (libFuzzer, built by mayhem/build.sh via cargo-fuzz at /mayhem/fuzz_regex_automata_deserialize_dense_dfa).
+# Seeds are the upstream in-tree regression corpus for this target (fuzz/regressions/), staged into
+# mayhem/seeds/fuzz_regex_automata_deserialize_dense_dfa/ by the integration.
+project: regex
+target: fuzz_regex_automata_deserialize_dense_dfa
+testsuite:
+  - file:///mayhem/mayhem/seeds/fuzz_regex_automata_deserialize_dense_dfa
+cmds:
+  - cmd: /mayhem/fuzz_regex_automata_deserialize_dense_dfa
+    libfuzzer: true
