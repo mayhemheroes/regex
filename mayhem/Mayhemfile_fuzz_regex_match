@@ -1,0 +1,10 @@
+# Mayhem target: regex's fuzz_regex_match fuzzer (libFuzzer, built by mayhem/build.sh via cargo-fuzz at /mayhem/fuzz_regex_match).
+# Seeds are the upstream in-tree regression corpus for this target (fuzz/regressions/), staged into
+# mayhem/seeds/fuzz_regex_match/ by the integration.
+project: regex
+target: fuzz-regex-match
+testsuite:
+  - file:///mayhem/mayhem/seeds/fuzz_regex_match
+cmds:
+  - cmd: /mayhem/fuzz_regex_match
+    libfuzzer: true

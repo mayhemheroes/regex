@@ -1,0 +1,10 @@
+# Mayhem target: regex's ast_roundtrip fuzzer (libFuzzer, built by mayhem/build.sh via cargo-fuzz at /mayhem/ast_roundtrip).
+# Seeds are the upstream in-tree regression corpus for this target (fuzz/regressions/), staged into
+# mayhem/seeds/ast_roundtrip/ by the integration.
+project: regex
+target: ast_roundtrip
+testsuite:
+  - file:///mayhem/mayhem/seeds/ast_roundtrip
+cmds:
+  - cmd: /mayhem/ast_roundtrip
+    libfuzzer: true
