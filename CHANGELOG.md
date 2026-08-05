@@ -1,3 +1,13 @@
+1.13.2 (TBD)
+============
+TODO
+
+Bug fixes:
+
+* [#1333](https://github.com/rust-lang/regex/issues/1333):
+Fix a glob syntax error in `package.include`.
+
+
 1.13.1 (2026-07-15)
 ===================
 This is a release that fixes a bug where incorrect regex match offsets could be
